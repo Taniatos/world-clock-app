@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="mainContainer">
@@ -18,39 +20,40 @@
           <option value="">Berlin</option>
         </select>
         <div class="smallContainer">
-          <div class="city">
+          <div class="city" id="new-york">
             <div>
               <h2>New York</h2>
-              <div class="date">February 22, 2023</div>
+              <div class="date"></div>
             </div>
-            <div class="time">2:43:09<span id="ampm"> am</span></div>
+            <div class="time"></div>
           </div>
-          <div class="city">
+          <div class="city" id="kyiv">
             <div>
               <h2>Kyiv</h2>
-              <div class="date">February 22, 2023</div>
+              <div class="date"></div>
             </div>
-            <div class="time">2:43:09<span id="ampm"> am</span></div>
+            <div class="time"></div>
           </div>
-          <div class="city">
+          <div class="city" id="tokyo">
             <div>
               <h2>Tokyo</h2>
-              <div class="date">February 22, 2023</div>
+              <div class="date"></div>
             </div>
-            <div class="time">2:43:09<span id="ampm"> am</span></div>
+            <div class="time"></div>
           </div>
-          <div class="city">
+          <div class="city" id="sydney">
             <div>
               <h2>Sydney</h2>
-              <div class="date">February 22, 2023</div>
+              <div class="date"></div>
             </div>
-            <div class="time">2:43:09<span id="ampm"> am</span></div>
+            <div class="time"></div>
           </div>
         </div>
       </div>
     </div>
     <footer>
-      This project was coded by <strong>Tetiana Korchynska</strong> and is open-sourced on
+      This project was coded by <strong>Tetiana Korchynska</strong> and is
+      open-sourced on
       <a href="https://github.com/Taniatos/world-clock-app">GitHub</a>.
     </footer>
     <script src="javascript/index.js"></script>
