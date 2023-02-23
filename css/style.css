@@ -49,6 +49,9 @@ select {
   color: #1e2e33;
   outline: none;
 }
+option {
+  background-color: rgba(216, 201, 204, 0.5);
+}
 
 .smallContainer {
   width: 460px;
@@ -100,6 +103,12 @@ h2 {
   color: #1e2e33;
   font-size: 20px;
   vertical-align: text-top;
+}
+#allCities {
+  color: #1e2e33;
+  font-size: 14px;
+  margin-left: 16px;
+
 }
 footer {
   font-family: "Montserrat", sans-serif;

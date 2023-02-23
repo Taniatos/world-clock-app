@@ -50,7 +50,15 @@ function updateClock() {
 
 function updateCity(event) {
   let cityTZ = event.target.value;
-  let cityName = cityTZ.replace("_", " ").split("/")[1];
+  if (cityTZ === "current") {
+    cityTZ = moment.tz.guess();
+  }
+  let cityName = cityTZ
+    .replace("_", " ")
+    .replace("Kiev", "Kyiv")
+    .replace("Uzhgorod", "Uzhhorod")
+    .split("/")[1];
+
   let cityTime = moment().tz(cityTZ);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = `
@@ -63,6 +71,7 @@ function updateCity(event) {
               "h:mm:ss"
             )} <span id="ampm"> ${cityTime.format("a")}</span></div>
         </div>
+        <a href="/" id="allCities">Back to all cities</a>
         `;
 }
 updateClock();
