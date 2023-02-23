@@ -48,5 +48,25 @@ function updateClock() {
   )} <span id="ampm"> ${sydneyTime.format("a")}</span>`;
 }
 
+function updateCity(event) {
+  let cityTZ = event.target.value;
+  let cityName = cityTZ.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTZ);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+        <div class="city">
+            <div>
+             <h2>${cityName}</h2>
+             <div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
+            </div>
+            <div class="time">${cityTime.format(
+              "h:mm:ss"
+            )} <span id="ampm"> ${cityTime.format("a")}</span></div>
+        </div>
+        `;
+}
 updateClock();
 setInterval(updateClock, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
