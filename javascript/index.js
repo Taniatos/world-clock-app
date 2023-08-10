@@ -71,7 +71,7 @@ function updateCity(event) {
               "h:mm:ss"
             )} <span id="ampm"> ${cityTime.format("a")}</span></div>
         </div>
-        <a href="/" id="allCities">Back to all cities</a>
+        <a href="/" id="allCitiesBtn">Back to all cities</a>
         `;
 }
 updateClock();
